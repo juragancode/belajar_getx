@@ -25,46 +25,163 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Dialog GetX"),
+        title: Text("BottomSheet GetX"),
       ),
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              // showDialog(
+              // showModalBottomSheet(
               //   context: context,
-              //   builder: (context) => AlertDialog(
-              //     shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(0)),
-              //     title: Text("This is title"),
-              //     content: Text("This is alert content in dialog function"),
+              //   builder: (context) => Container(
+              //     // height: 500,
+              //     color: Colors.grey.shade300,
+              //     child: ListView(
+              //       children: [
+              //         ListTile(
+              //           leading: Icon(Icons.home),
+              //           title: Text("Home"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.person),
+              //           title: Text("Profile"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.adb),
+              //           title: Text("Bug"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.add_business),
+              //           title: Text("Add Shop"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.home),
+              //           title: Text("Home"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.person),
+              //           title: Text("Profile"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.adb),
+              //           title: Text("Bug"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.add_business),
+              //           title: Text("Add Shop"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.home),
+              //           title: Text("Home"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.person),
+              //           title: Text("Profile"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.adb),
+              //           title: Text("Bug"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.add_business),
+              //           title: Text("Add Shop"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.home),
+              //           title: Text("Home"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.person),
+              //           title: Text("Profile"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.adb),
+              //           title: Text("Bug"),
+              //         ),
+              //         ListTile(
+              //           leading: Icon(Icons.add_business),
+              //           title: Text("Add Shop"),
+              //         ),
+              //       ],
+              //     ),
               //   ),
               // );
-              // Get.defaultDialog(
-              //   title: "This is title",
-              //   middleText: "This is alert content in dialog function",
-              //   // content: Text("This is alert content in dialog function"),
-              //   actions: [
-              //     ElevatedButton(
-              //       onPressed: () {},
-              //       child: Text("Lanjut"),
-              //     ),
-              //     ElevatedButton(
-              //       onPressed: () {},
-              //       child: Text("Cancel"),
-              //     ),
-              //   ],
-              // );
 
-              Get.dialog(
-                AlertDialog(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0)),
-                  title: Text("This is title"),
-                  content: Text("This is alert content in dialog function"),
+              Get.bottomSheet(
+                Container(
+                  // height: 500,
+                  color: Colors.grey.shade300,
+                  child: ListView(
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.home),
+                        title: Text("Home"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.person),
+                        title: Text("Profile"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.adb),
+                        title: Text("Bug"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.add_business),
+                        title: Text("Add Shop"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.home),
+                        title: Text("Home"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.person),
+                        title: Text("Profile"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.adb),
+                        title: Text("Bug"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.add_business),
+                        title: Text("Add Shop"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.home),
+                        title: Text("Home"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.person),
+                        title: Text("Profile"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.adb),
+                        title: Text("Bug"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.add_business),
+                        title: Text("Add Shop"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.home),
+                        title: Text("Home"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.person),
+                        title: Text("Profile"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.adb),
+                        title: Text("Bug"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.add_business),
+                        title: Text("Add Shop"),
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
-            child: Text("Open Dialog")),
+            child: Text("Open Bottom Sheet")),
       ),
     );
   }
