@@ -18,57 +18,34 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final myController = Get.put(alfaController());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("GetX"),
+        title: Text("SnackBar GetX"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Obx(() {
-              return Text(
-                "${myController.data.value}",
-                style: TextStyle(fontSize: 200),
+        child: ElevatedButton(
+            onPressed: () {
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //   SnackBar(
+              //     content: Text("Halo"),
+              //     action: SnackBarAction(
+              //       label: "ini label",
+              //       onPressed: () {},
+              //     ),
+              //   ),
+              // );
+
+              Get.snackbar(
+                "Halo",
+                "This is messege!",
+                // backgroundColor: Colors.grey,
               );
-            }),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                    onPressed: () {
-                      myController.decrement();
-                    },
-                    child: Icon(Icons.remove)),
-                ElevatedButton(
-                    onPressed: () {
-                      myController.increment();
-                    },
-                    child: Icon(Icons.add)),
-              ],
-            )
-          ],
-        ),
+            },
+            child: Text("Open SnackBar")),
       ),
     );
-  }
-}
-
-class alfaController extends GetxController {
-  var data = 0.obs;
-//   increment() => data++;
-//   decrement() => data--;
-
-  increment() {
-    data = data + 1;
-  }
-
-  decrement() {
-    data = data - 1;
   }
 }
