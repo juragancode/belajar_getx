@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,33 +18,53 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("SnackBar GetX"),
+        title: Text("Dialog GetX"),
       ),
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              // ScaffoldMessenger.of(context).showSnackBar(
-              //   SnackBar(
-              //     content: Text("Halo"),
-              //     action: SnackBarAction(
-              //       label: "ini label",
-              //       onPressed: () {},
-              //     ),
+              // showDialog(
+              //   context: context,
+              //   builder: (context) => AlertDialog(
+              //     shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(0)),
+              //     title: Text("This is title"),
+              //     content: Text("This is alert content in dialog function"),
               //   ),
               // );
+              // Get.defaultDialog(
+              //   title: "This is title",
+              //   middleText: "This is alert content in dialog function",
+              //   // content: Text("This is alert content in dialog function"),
+              //   actions: [
+              //     ElevatedButton(
+              //       onPressed: () {},
+              //       child: Text("Lanjut"),
+              //     ),
+              //     ElevatedButton(
+              //       onPressed: () {},
+              //       child: Text("Cancel"),
+              //     ),
+              //   ],
+              // );
 
-              Get.snackbar(
-                "Halo",
-                "This is messege!",
-                // backgroundColor: Colors.grey,
+              Get.dialog(
+                AlertDialog(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0)),
+                  title: Text("This is title"),
+                  content: Text("This is alert content in dialog function"),
+                ),
               );
             },
-            child: Text("Open SnackBar")),
+            child: Text("Open Dialog")),
       ),
     );
   }
