@@ -16,147 +16,25 @@ class HomePage extends StatelessWidget {
           "Tipe data Rx",
         ),
       ),
-      body: ListView(
-        padding: EdgeInsets.all(20),
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Obx(() => Text(
-                    "${homeC.dataInt}",
+                    "Terjadi perubahan : ${homeC.dataPantau} X",
                     style: TextStyle(fontSize: 20),
                   )),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () => homeC.decrementInt(),
-                    child: Text("-"),
-                  ),
-                  SizedBox(width: 20),
-                  ElevatedButton(
-                    onPressed: () => homeC.incrementInt(),
-                    child: Text("+"),
-                  ),
-                ],
-              ),
+              SizedBox(height: 20),
+              TextField(
+                onChanged: (value) => homeC.change(),
+                decoration: InputDecoration(
+                    labelText: "Data", border: OutlineInputBorder()),
+              )
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Obx(() => Text(
-                    "${homeC.dataString}",
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () => homeC.resetDataString(),
-                    child: Text("reset"),
-                  ),
-                  SizedBox(width: 20),
-                  ElevatedButton(
-                    onPressed: () => homeC.updateDataString(),
-                    child: Text("upadate"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Obx(() => Text(
-                    "${homeC.dataDouble}",
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () => homeC.decrementDouble(),
-                    child: Text("-"),
-                  ),
-                  SizedBox(width: 20),
-                  ElevatedButton(
-                    onPressed: () => homeC.incrementDouble(),
-                    child: Text("+"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Obx(() => Text(
-                    "${homeC.dataBool}",
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Row(
-                children: [
-                  // ElevatedButton(
-                  //   onPressed: () => homeC.resetDataBool(),
-                  //   child: Text("false"),
-                  // ),
-                  // SizedBox(width: 20),
-                  // ElevatedButton(
-                  //   onPressed: () => homeC.updateDataBool(),
-                  //   child: Text("true"),
-                  // ),
-
-                  ElevatedButton(
-                    onPressed: () => homeC.changeDataBool(),
-                    child: Text("change"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Obx(() => Text(
-                    "${homeC.dataList}",
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () => homeC.tambahDataList(),
-                    child: Text("tambah"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Obx(() => Text(
-                    "${homeC.dataSet}",
-                    style: TextStyle(fontSize: 20),
-                  )),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () => homeC.tambahDataSet(),
-                    child: Text("tambah"),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Divider(
-            thickness: 3,
-          ),
-          Obx(
-            () => ListTile(
-                title: Text(
-              "${homeC.myMap}",
-              style: TextStyle(fontSize: 20),
-            )),
-          ),
-        ],
+        ),
       ),
     );
   }
