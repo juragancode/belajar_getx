@@ -17,7 +17,6 @@ class homeController extends GetxController {
     "Musik": 96,
     "Pemprograman": 97,
     "Desain": 98,
-    "Strategi": 98,
   }.obs;
 
   int angkaSelanjutnyaList = 4;
