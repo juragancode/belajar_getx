@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../pages/pageSatu.dart';
+import 'package:get/get.dart';
+import '../controllers/pageSatuController.dart';
 
 class PageDua extends StatelessWidget {
-  PageDua(this.dataPageDua);
-  PageSatu dataPageDua;
+  final PageSatuC = Get.put(PageSatuController());
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class PageDua extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "${dataPageDua.data['name']} - ${dataPageDua.data['age']} tahun",
+                "${PageSatuC.data['name']} - ${PageSatuC.data['age']} tahun",
                 style: TextStyle(fontSize: 30),
               ),
             ],

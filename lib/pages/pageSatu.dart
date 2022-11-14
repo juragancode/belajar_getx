@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../pages/pageDua.dart';
+import '../controllers/pageSatuController.dart';
 
 class PageSatu extends StatelessWidget {
-  Map<String, dynamic> data = {
-    "name": "Bang So He",
-    "age": 48,
-  };
-  Map<String, dynamic> data2 = {
-    "name": "Lee Min Hae",
-    "age": 34,
-  };
+  final PageSatuC = Get.put(PageSatuController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +22,7 @@ class PageSatu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "${data['name']} - ${data['age']} tahun",
+                "${PageSatuC.data['name']} - ${PageSatuC.data['age']} tahun",
                 style: TextStyle(fontSize: 30),
               ),
               SizedBox(height: 20),
@@ -36,7 +31,7 @@ class PageSatu extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PageDua(PageSatu()),
+                        builder: (context) => PageDua(),
                       ),
                     );
                   },
