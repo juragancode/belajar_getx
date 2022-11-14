@@ -36,7 +36,7 @@ class PageSatu extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PageDua(data),
+                        builder: (context) => PageDua(PageSatu()),
                       ),
                     );
                   },

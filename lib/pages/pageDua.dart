@@ -3,7 +3,7 @@ import '../pages/pageSatu.dart';
 
 class PageDua extends StatelessWidget {
   PageDua(this.dataPageDua);
-  Map<String, dynamic> dataPageDua;
+  PageSatu dataPageDua;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PageDua extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "${dataPageDua['name']} - ${dataPageDua['age']} tahun",
+                "${dataPageDua.data['name']} - ${dataPageDua.data['age']} tahun",
                 style: TextStyle(fontSize: 30),
               ),
             ],
