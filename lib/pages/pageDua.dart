@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import '../pages/pageSatu.dart';
 
-class HomePage extends StatelessWidget {
+class PageDua extends StatelessWidget {
+  PageDua(this.dataPageDua);
+  Map<String, dynamic> dataPageDua;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Dependency Management GetX",
+          "Page 1",
         ),
       ),
       body: Padding(
@@ -16,7 +19,12 @@ class HomePage extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+            children: [
+              Text(
+                "${dataPageDua['name']} - ${dataPageDua['age']} tahun",
+                style: TextStyle(fontSize: 30),
+              ),
+            ],
           ),
         ),
       ),
