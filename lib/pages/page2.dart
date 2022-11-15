@@ -1,3 +1,4 @@
+import 'package:belajar_getx/pages/page3.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
@@ -21,13 +22,26 @@ class PageDua extends StatelessWidget {
               "Page 2",
               style: TextStyle(fontSize: 30),
             ),
-            ElevatedButton(
-              onPressed: () {
-                // Navigator.of(context).pop();
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigator.of(context).pop();
 
-                Get.back(); //like pop
-              },
-              child: Icon(Icons.arrow_back_ios_new),
+                    Get.back(); //like pop
+                  },
+                  child: Text("<Back"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigator.of(context).pop();
+
+                    Get.to(PageTiga()); //like pop
+                  },
+                  child: Text("Next>"),
+                ),
+              ],
             ),
           ],
         ),

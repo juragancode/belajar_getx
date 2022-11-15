@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './page5.dart';
+import 'package:get/get.dart';
 
 class PageEmpat extends StatelessWidget {
   const PageEmpat({Key? key}) : super(key: key);
@@ -11,9 +13,20 @@ class PageEmpat extends StatelessWidget {
         title: Text("Page 4"),
       ),
       body: Center(
-        child: Text(
-          "Page 4",
-          style: TextStyle(fontSize: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Page 4",
+              style: TextStyle(fontSize: 30),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(PageLima());
+              },
+              child: Text("Next"),
+            ),
+          ],
         ),
       ),
     );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import './page2.dart';
 
 class PageSatu extends StatelessWidget {
   const PageSatu({Key? key}) : super(key: key);
@@ -11,9 +13,20 @@ class PageSatu extends StatelessWidget {
         title: Text("Page 1"),
       ),
       body: Center(
-        child: Text(
-          "Page 1",
-          style: TextStyle(fontSize: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Page 1",
+              style: TextStyle(fontSize: 30),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(PageDua());
+              },
+              child: Text("Next"),
+            ),
+          ],
         ),
       ),
     );
