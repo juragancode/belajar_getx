@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../controllers/pageSatuController.dart';
 
 // import './pages/home.dart';
 import './pages/pageSatu.dart';
@@ -9,7 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final PageSatuC = Get.lazyPut(() => PageSatuController());
+  // final PageSatuC = Get.put(PageSatuController());
 
   @override
   Widget build(BuildContext context) {

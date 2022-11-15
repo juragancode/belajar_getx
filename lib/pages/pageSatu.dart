@@ -4,7 +4,7 @@ import '../pages/pageDua.dart';
 import '../controllers/pageSatuController.dart';
 
 class PageSatu extends StatelessWidget {
-  final PageSatuC = Get.put(PageSatuController());
+  PageSatuController PageSatuC = Get.find();
 
   @override
   Widget build(BuildContext context) {
