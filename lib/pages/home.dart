@@ -36,9 +36,12 @@ class HomePage extends StatelessWidget {
               //   ),
               // );
 
-              Get.off(PageSatu()); // Sama seperti pushReplacement
+              // Get.off(PageSatu()); // Sama seperti pushReplacement
 
               // Get.to(PageSatu());
+
+              // Navigator.of(context).pushNamed("1");
+              Get.toNamed("1");
             },
             child: Text("Page 1"),
           ),
