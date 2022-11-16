@@ -1,4 +1,3 @@
-import 'package:belajar_getx/pages/page3.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
@@ -37,7 +36,7 @@ class PageDua extends StatelessWidget {
                   onPressed: () {
                     // Navigator.of(context).pop();
 
-                    Get.to(PageTiga()); //like pop
+                    Get.toNamed("3"); //like pop
                   },
                   child: Text("Next>"),
                 ),

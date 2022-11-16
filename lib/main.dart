@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
         "4": (context) => PageEmpat(),
         "5": (context) => PageLima(),
       },
+      // getPages: [
+      //   GetPage(name: "/home", page: () => HomePage()),
+      //   GetPage(name: "/1", page: () => PageSatu()),
+      //   GetPage(name: "/2", page: () => PageDua()),
+      //   GetPage(name: "/3", page: () => PageTiga()),
+      //   GetPage(name: "/4", page: () => PageEmpat()),
+      //   GetPage(name: "/5", page: () => PageLima()),
+      // ],
     );
   }
 }

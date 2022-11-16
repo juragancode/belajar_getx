@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './page5.dart';
 import 'package:get/get.dart';
 
 class PageEmpat extends StatelessWidget {
@@ -22,7 +21,7 @@ class PageEmpat extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Get.to(PageLima());
+                Get.toNamed("5");
               },
               child: Text("Next"),
             ),

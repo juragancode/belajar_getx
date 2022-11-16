@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import './page1.dart';
-import './page2.dart';
-import './page3.dart';
-import './page4.dart';
-import './page5.dart';
+// import './page1.dart';
+// import './page2.dart';
+// import './page3.dart';
+// import './page4.dart';
+// import './page5.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -47,25 +47,25 @@ class HomePage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              Get.to(PageDua());
+              Get.toNamed("2");
             },
             child: Text("Page 2"),
           ),
           ElevatedButton(
             onPressed: () {
-              Get.to(PageTiga());
+              Get.toNamed("3");
             },
             child: Text("Page 3"),
           ),
           ElevatedButton(
             onPressed: () {
-              Get.to(PageEmpat());
+              Get.toNamed("4");
             },
             child: Text("Page 4"),
           ),
           ElevatedButton(
             onPressed: () {
-              Get.to(PageLima());
+              Get.toNamed("5");
             },
             child: Text("Page 5"),
           ),

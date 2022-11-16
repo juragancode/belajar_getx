@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import './page4.dart';
 
 class PageTiga extends StatelessWidget {
   const PageTiga({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class PageTiga extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Get.to(PageEmpat());
+                Get.toNamed("4");
               },
               child: Text("Next>"),
             ),
