@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import './pages/home.dart';
 import './pages/counter.dart';
-import 'controllers/counterControllers.dart';
+import 'bindings/counterBindings.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,9 +22,11 @@ class MyApp extends StatelessWidget {
       // initialBinding: BindingsBuilder.put(() => CounterConroller()),
       getPages: [
         GetPage(
-            name: "/counter",
-            page: () => CounterPage(),
-            binding: BindingsBuilder.put(() => CounterConroller()))
+          name: "/counter",
+          page: () => CounterPage(),
+          binding: CounterBindings(),
+          // binding: BindingsBuilder.put(() => CounterConroller()),
+        ),
       ],
     );
   }

@@ -1,7 +1,5 @@
-import 'package:belajar_getx/pages/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/counterControllers.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
