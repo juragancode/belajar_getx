@@ -1,10 +1,11 @@
+import 'package:belajar_getx/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './pages/home.dart';
-import './pages/counter.dart';
-import 'bindings/counterBindings.dart';
+import 'pages/login.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
   runApp(MyApp());
 }
 
@@ -15,17 +16,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
-      // routes: {
-      //   "counter": (context) => CounterPage(),
-      // },
-      // initialBinding: BindingsBuilder.put(() => CounterConroller()),
+      home: LoginPage(),
       getPages: [
         GetPage(
-          name: "/counter",
-          page: () => CounterPage(),
-          binding: CounterBindings(),
-          // binding: BindingsBuilder.put(() => CounterConroller()),
+          name: "/login",
+          page: () => LoginPage(),
+        ),
+        GetPage(
+          name: "/home",
+          page: () => HomePage(),
         ),
       ],
     );

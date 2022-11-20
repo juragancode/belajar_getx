@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../controllers/loginController.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final LoginController loginC = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Bindings Builder GetX"),
+        title: Text("Home"),
       ),
-      body: Center(
-        child: ElevatedButton(
-            // onPressed: () => Get.to(() => CounterPage(),
-            //     binding: BindingsBuilder.put(() => CounterConroller())),
-            onPressed: () => Get.toNamed("/counter"),
-            child: Text("Counter Page >>")),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => loginC.logout(),
+        child: Icon(Icons.logout),
       ),
     );
   }
