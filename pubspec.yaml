@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  get_cli: ^1.7.1
   get_storage: ^2.0.3
 
 dev_dependencies:
